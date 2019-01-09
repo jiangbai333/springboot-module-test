@@ -6,7 +6,7 @@
     <groupId>com.springboot2.api</groupId>
     <artifactId>springboot2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>war</packaging>
 
     <name>api</name>
     <description>Demo project for Spring Boot</description>
@@ -48,6 +48,19 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>  
+                <groupId>org.codehaus.mojo</groupId>  
+                <artifactId>tomcat-maven-plugin</artifactId>  
+                <version>1.1</version>  
+                <configuration>  
+                    <url>http://localhost:8080/manager/text</url>
+                    <username>tomcat</username>  
+                    <password>tomcat</password>  
+                    <!-- <url>http://192.168.1.193:8080/manager/text</url>
+                    <username>d41d8cd98f00b204e9800998ecf8427e</username>  
+                    <password>7ce0766a2fef109df2b37bef2bfe5105</password>  -->
+                </configuration>  
             </plugin>
         </plugins>
     </build>
